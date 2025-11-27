@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PetVille — Categoria</title>
+
+  <!-- FOUNDATION -->
+  <link rel="stylesheet" href="./../css/foundation.css">
+  <link rel="stylesheet" href="./../css/app.css">
+
+  <!-- SEU CSS -->
+  <link rel="stylesheet" href="./../css/style.css">
+  
+  <style>
+    /* Estilos específicos para a estrutura da página de categoria */
+    .category-header {
+      margin-bottom: 1rem;
+    }
+    
+    .category-header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    
+    .subcategories {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e6e6e6;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+    .subcategories a {
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    
+    .subcategories a:hover {
+      color: #2ba6cb;
+    }
+    
+    .filter-section {
+      margin-bottom: 2rem;
+    }
+    
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+    
+    .filter-bar .filter-label {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    
+    .filter-bar button {
+      padding: 0.5rem 1rem;
+      background-color: #f5f5f5;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    
+    .filter-bar button:hover {
+      background-color: #e9e9e9;
+    }
+    
+    .arrivals-title {
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .product-card {
+      border: 1px solid #e6e6e6;
+      border-radius: 4px;
+      padding: 1rem;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      position: relative;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .product-image {
+      height: 200px;
+      background-color: #f5f5f5;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+    
+    .product-name {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    
+    .product-meta {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-price {
+      font-weight: bold;
+      color: #2ba6cb;
+      font-size: 1.1rem;
+    }
+    
+    .show-more {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .show-more button {
+      background-color: #2ba6cb;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .show-more p {
+      margin-top: 0.5rem;
+      color: #666;
+    }
+    
+    .product-tag {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Aviso -->
+  <div class="announce text-center grid-container full">
+    Frete grátis para pedidos acima de R$200! 🐾 Aproveite!
+  </div>
+
+  <!-- HEADER GLOBAL -->
+  <header class="site-header grid-container full">
+
+    <div class="grid-x grid-padding-x align-middle header-inner">
+
+      <!-- Logo -->
+      <div class="cell shrink brand">
+        <img src="./../img/logo12345.png" alt="PetVille Logo">
+      </div>
+
+      <!-- Buscar -->
+      <div class="cell auto search">
+        <input type="search" placeholder="Busque produtos para seu pet...">
+      </div>
+
+      <!-- Ações -->
+      <div class="cell shrink header-actions">
+
+        <div class="icon-wrapper favorites">
+          <div class="icon">♡</div>
+          <span class="badge">12</span>
+        </div>
+
+        <a href="login.html" class="icon-wrapper login">
+          <div class="icon">👤</div>
+          <span class="login-text">Entrar</span>
+        </a>
+
+        <a href="cart.html" class="icon-wrapper cart">
+          <div class="icon">🛒</div>
+          <span class="badge">2</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <nav class="primary-nav">
+      <ul class="menu align-center">
+        <li><a href="category.html">Produtos</a></li>
+        <li><a href="category.html">Rações</a></li>
+        <li><a href="category.html">Higiene & Limpeza</a></li>
+        <li><a href="category.html">Saúde & Medicina</a></li>
+        <li><a href="category.html">Alimentação</a></li>
+        <li><a href="category.html">Roupas Pet</a></li>
+        <li><a href="#">Blog PetVille</a></li>
+        <li><a href="#">Curiosidades</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- MAIN -->
+  <main class="content grid-container">
+
+    <!-- TÍTULO DA CATEGORIA -->
+    <section class="category-header grid-x align-middle">
+      <div class="cell auto">
+        <h1>Rações para Cães</h1>
+      </div>
+      <div class="cell shrink">
+        <a href="category.html">Todos os Produtos</a>
+      </div>
+    </section>
+
+  <section id="categories-grid" class="categories-section grid-container">
+  <div class="grid-x grid-margin-x grid-margin-y align-center text-center">
+    <!-- Card 1 -->
+    <a href="pages/category.html" class="category-card cell small-12 medium-6 large-3">
+      <div class="category-img"></div>
+      <h4>Bestsellers</h4>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="pages/category.html" class="category-card cell small-12 medium-6 large-3">
+      <div class="category-img"></div>
+      <h4>Seasonal</h4>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="pages/category.html" class="category-card cell small-12 medium-6 large-3">
+      <div class="category-img"></div>
+      <h4>Category</h4>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="pages/category.html" class="category-card cell small-12 medium-6 large-3">
+      <div class="category-img"></div>
+      <h4>Outlet</h4>
+    </a>
+
+    <!-- Card 5 -->
+    <a href="pages/category.html" class="category-card cell small-12 medium-6 large-3">
+      <div class="category-img"></div>
+      <h4>Outlet</h4>
+    </a>
+
+    <!-- Card 6 -->
+    <a href="pages/category.html" class="category-card cell small-12 medium-6 large-3">
+      <div class="category-img"></div>
+      <h4>Outlet</h4>
+    </a>
+  </div>
+</section>
+
+    <!-- BARRA DE FILTROS - ESTILO DA IMAGEM -->
+    <section class="filter-section">
+      <div class="filter-bar">
+        <span class="filter-label">Ordenar por</span>
+        <button>Novidades</button>
+        <button>Mais Vendidos</button>
+        <button>Cor</button>
+        <button>Tamanho</button>
+        <button>Marca</button>
+        <button>Todos os filtros</button>
+      </div>
+    </section>
+
+    <!-- TÍTULO NOVIDADES -->
+    <h2 class="arrivals-title">Novidades</h2>
+
+    <!-- GRID DE PRODUTOS -->
+    <section class="products-grid">
+      <!-- Produto 1 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-tag">NOVO</div>
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração Premium para Cães Adultos</div>
+        <div class="product-meta">Sabor frango, 15kg</div>
+        <div class="product-price">R$ 189,90</div>
+      </a>
+      
+      <!-- Produto 2 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-tag">NOVO</div>
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração para Filhotes Raças Pequenas</div>
+        <div class="product-meta">Sabor carne, 3kg</div>
+        <div class="product-price">R$ 79,90</div>
+      </a>
+      
+      <!-- Produto 3 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração Light para Cães</div>
+        <div class="product-meta">Controle de peso, 10kg</div>
+        <div class="product-price">R$ 149,90</div>
+      </a>
+      
+      <!-- Produto 4 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração para Gatos Castrados</div>
+        <div class="product-meta">Sabor peixe, 7,5kg</div>
+        <div class="product-price">R$ 129,90</div>
+      </a>
+      
+      <!-- Produto 5 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração Úmida para Cães</div>
+        <div class="product-meta">Sabor carne, 12 unidades</div>
+        <div class="product-price">R$ 59,90</div>
+      </a>
+      
+      <!-- Produto 6 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração para Cães Idosos</div>
+        <div class="product-meta">Sabor cordeiro, 12kg</div>
+        <div class="product-price">R$ 169,90</div>
+      </a>
+      
+      <!-- Produto 7 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração para Gatos Filhotes</div>
+        <div class="product-meta">Sabor frango, 1kg</div>
+        <div class="product-price">R$ 39,90</div>
+      </a>
+      
+      <!-- Produto 8 -->
+      <a href="product-details.html" class="product-card">
+        <div class="product-image">Imagem do Produto</div>
+        <div class="product-name">Ração Hipoaergênica para Cães</div>
+        <div class="product-meta">Sabor salmão, 8kg</div>
+        <div class="product-price">R$ 199,90</div>
+      </a>
+      
+    </section>
+
+   <!-- Rodapé -->
+ <script src="https://cdn.tailwindcss.com"></script>
+<!-- Importa Lucide Icons para os ícones sociais e de localização -->
+<script type="module">
+  // CORREÇÃO: Importar o objeto 'icons' juntamente com 'createIcons'
+  import { createIcons, icons } from 'https://cdn.skypack.dev/lucide';
+  
+  // CORREÇÃO: Passar o objeto 'icons' para a função createIcons
+  createIcons({ icons });
+</script>
+
+
+<footer class="bg-gray-900 text-gray-300 py-12 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-8 border-b border-gray-700 pb-10 mb-8">
+      <!-- Mudei 'bg-gray-100' para 'bg-gray-900' e ajustei a cor da linha divisória -->
+
+      <!-- Coluna 1: PetVille Info & Social (Inspirada na Referência) -->
+      <div class="col-span-2 lg:col-span-2 space-y-4">
+        <div class="flex items-center space-x-2">
+          <!-- Logo simples, substitua por uma imagem SVG ou tag se necessário -->
+          <span class="text-3xl font-bold text-orange-400">PetVille</span>
+          <i data-lucide="paw-print" class="w-6 h-6 text-orange-400"></i>
+          <!-- Alterei a cor da marca para orange-400 para melhor contraste no fundo escuro -->
+        </div>
+        <p class="text-sm text-gray-400 max-w-xs">
+          Oferecemos os melhores produtos e serviços com todo o carinho que seu amigo merece.
+        </p>
+
+        <!-- Botão Contact Us -->
+        <button class="bg-indigo-600 text-white font-medium py-2 px-6 rounded-xl hover:bg-indigo-700 transition-colors shadow-lg">
+          Contact Us
+        </button>
+
+        <!-- Redes Sociais (Usando Lucide Icons) -->
+        <div class="flex space-x-4 pt-4">
+          <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+            <i data-lucide="facebook" class="w-6 h-6"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+            <i data-lucide="twitter" class="w-6 h-6"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+            <i data-lucide="linkedin" class="w-6 h-6"></i>
+          </a>
+          <!-- Ajustei as cores padrão para text-gray-400 para serem visíveis -->
+        </div>
+      </div>
+
+      <!-- Coluna 2: Atendimento (Seus Dados Originais) -->
+      <div class="link-col space-y-3">
+        <h5 class="font-semibold text-white mb-4">Atendimento</h5>
+        <a href="#" class="block text-sm">Trocas & Garantia</a>
+        <a href="#" class="block text-sm">Pagamentos</a>
+        <a href="#" class="block text-sm">Envio</a>
+        <a href="#" class="block text-sm">Termos de Serviço</a>
+        <a href="#" class="block text-sm">Privacidade</a>
+      </div>
+
+      <!-- Coluna 3: PetVille (Seus Dados Originais) -->
+      <div class="link-col space-y-3">
+        <h5 class="font-semibold text-white mb-4">PetVille</h5>
+        <a href="#" class="block text-sm">Sobre Nós</a>
+        <a href="#" class="block text-sm">Marcas</a>
+        <a href="#" class="block text-sm">Afiliados</a>
+        <a href="#" class="block text-sm">Investidores</a>
+        <a href="#" class="block text-sm">Cookies</a>
+      </div>
+
+      <!-- Coluna 4: Gift Card (Seus Dados Originais) -->
+      <div class="link-col space-y-3">
+        <h5 class="font-semibold text-white mb-4">Gift Card</h5>
+        <a href="#" class="block text-sm">Comprar</a>
+        <a href="#" class="block text-sm">Resgatar</a>
+        <a href="#" class="block text-sm">Ajuda</a>
+        <a href="#" class="block text-sm">Contato</a>
+      </div>
+
+      <!-- Coluna 5: Avaliações (Seus Dados Originais) -->
+      <div class="link-col space-y-3 hidden lg:block"> <!-- Escondido em telas menores para melhor layout -->
+        <h5 class="font-semibold text-white mb-4">Avaliações</h5>
+        <p class="text-sm italic text-gray-400 border-l-4 border-orange-500 pl-3">
+          "Ótimos produtos e entrega rápida!" <br> <span class="text-xs text-gray-500">— Laura S., 6 dias atrás</span>
+        </p>
+        <!-- Ajustei a cor do texto da avaliação e a cor da borda laranja para maior visibilidade -->
+      </div>
+    </div>
+
+    <!-- Seção de Direitos Autorais e Localização/Idioma (Foot Bottom) -->
+    <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 pt-4">
+      <!-- Direitos Autorais -->
+      <p class="order-2 md:order-1 mt-4 md:mt-0">
+        © PetVille — Brasil <span class="font-medium text-orange-400">🐾</span>
+      </p>
+
+      <!-- Localização E Idioma -->
+      <div class="flex space-x-6 order-1 md:order-2">
+        
+        <!-- Localização -->
+        <div class="flex items-center space-x-1 cursor-pointer group">
+          <i data-lucide="map-pin" class="w-4 h-4 text-orange-400"></i>
+          <span class="text-white font-medium">United States</span>
+          <!-- Setinha para indicar que é um menu de seleção de região -->
+          <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i>
+        </div>
+
+        <!-- Idioma (NOVO) -->
+        <div class="flex items-center space-x-1 cursor-pointer group">
+          <i data-lucide="globe" class="w-4 h-4 text-orange-400"></i>
+          <span class="text-white font-medium">English (EN)</span>
+          <!-- Setinha para indicar que é um menu de seleção de idioma -->
+          <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Script para a acessibilidade/carregamento dos ícones Lucide
+  // já importado no cabeçalho com type="module"
+  console.log('Rodapé carregado com sucesso!');
+</script>
+</body>
+</html>

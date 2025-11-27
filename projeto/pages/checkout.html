@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — PetVille</title>
+
+  <!-- Usa o style.css principal -->
+   <link rel="stylesheet" href="./../css/foundation.css">
+<link rel="stylesheet" href="./../css/app.css">
+<link rel="stylesheet" href="./../css/style.css">
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announce">
+    Frete grátis em todos os pedidos acima de R$200! Por tempo limitado.
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="brand">
+        <span class="at">@</span>
+        PetVille
+      </div>
+
+      <div class="search">
+        <input type="search" placeholder="Buscar produtos..." />
+      </div>
+
+      <div class="header-actions">
+        <div class="icon">♡ <span class="badge">12</span></div>
+
+        <a href="login.html" class="icon">
+          👤 Login <span class="badge">2</span>
+        </a>
+
+        <a href="cart.html" class="icon">
+          🛒 <span class="badge">2</span>
+        </a>
+      </div>
+
+    </div>
+
+    <nav class="primary-nav">
+      <a href="index.html">Produtos</a>
+      <a href="#">Promoções</a>
+      <a href="#">Inspiração</a>
+      <a href="#">Marcas</a>
+      <a href="#">Outlet</a>
+      <a href="#">Envio</a>
+      <a href="#">Trocas & Garantia</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <!-- =================================
+       CHECKOUT CONTENT
+  ================================= -->
+  <main class="checkout">
+
+    <h1 class="checkout-title">Finalizar Compra</h1>
+
+    <div class="checkout-wrapper">
+
+      <!-- LEFT SIDE FORM -->
+      <section class="checkout-form">
+
+        <h2>Dados de Cobrança</h2>
+
+        <label>
+          Nome Completo
+          <input type="text" placeholder="Maria Souza">
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" placeholder="exemplo@mail.com">
+        </label>
+
+        <label>
+          Telefone
+          <input type="text" placeholder="(11) 99999-9999">
+        </label>
+
+        <label>
+          País
+          <input type="text" placeholder="Brasil">
+        </label>
+
+        <label>
+          Cidade
+          <input type="text" placeholder="São Paulo">
+        </label>
+
+        <label>
+          Endereço
+          <input type="text" placeholder="Rua, Número, Bairro...">
+        </label>
+
+        <h2>Método de Pagamento</h2>
+
+        <div class="payment-options">
+          <label class="pay-option">
+            <input type="radio" name="payment" checked>
+            Cartão de Crédito
+          </label>
+
+          <label class="pay-option">
+            <input type="radio" name="payment">
+            PayPal
+          </label>
+
+          <label class="pay-option">
+            <input type="radio" name="payment">
+            PIX
+          </label>
+        </div>
+
+        <div class="credit-info">
+          <label>
+            Número do Cartão
+            <input type="text" placeholder="0000 0000 0000 0000">
+          </label>
+
+          <div class="row">
+            <label>
+              Validade
+              <input type="text" placeholder="MM/AA">
+            </label>
+
+            <label>
+              CVV
+              <input type="text" placeholder="123">
+            </label>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RIGHT SIDE SUMMARY -->
+      <aside class="checkout-summary">
+
+        <h2>Resumo do Pedido</h2>
+
+        <div class="sum-item">
+          <div class="sum-img"></div>
+          <div>
+            <strong>Ração Premium</strong>
+            <p>15kg, Frango</p>
+          </div>
+          <span>R$95</span>
+        </div>
+
+        <div class="sum-item">
+          <div class="sum-img"></div>
+          <div>
+            <strong>Brinquedo Mordedor</strong>
+            <p>Azul</p>
+          </div>
+          <span>R$35</span>
+        </div>
+
+        <div class="totals">
+          <div><span>Subtotal</span><span>R$130</span></div>
+          <div><span>Frete</span><span>R$10</span></div>
+          <div class="total"><span>Total</span><span>R$140</span></div>
+        </div>
+
+        <a href="thank-you.html" class="btn-checkout">
+          FINALIZAR PEDIDO
+        </a>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-col">
+        <h5>Atendimento ao Cliente</h5>
+        <a href="#">Trocas & Garantia</a>
+        <a href="#">Pagamentos</a>
+        <a href="#">Envio</a>
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Informações da Empresa</h5>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Marcas</a>
+        <a href="#">Afiliados</a>
+        <a href="#">Investidores</a>
+        <a href="#">Cookies</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Gift Card</h5>
+        <a href="#">Comprar Gift Cards</a>
+        <a href="#">Resgatar Cartão</a>
+        <a href="#">Precisa de ajuda?</a>
+        <a href="#">Contato</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Avaliações</h5>
+        <p>
+          Ótima qualidade e preço <br>
+          João Silva, há 6 dias
+        </p>
+      </div>
+
+    </div>
+
+    <div class="foot-bottom">
+      PetVille — Localização: Brasil — 212
+    </div>
+
+  </footer>
+
+</body>
+</html>
